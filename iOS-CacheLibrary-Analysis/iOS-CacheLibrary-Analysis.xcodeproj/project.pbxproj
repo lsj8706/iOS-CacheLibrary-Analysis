@@ -16,6 +16,10 @@
 		CE0C9BDE2ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BDD2ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisTests.swift */; };
 		CE0C9BE82ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BE72ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITests.swift */; };
 		CE0C9BEA2ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BE92ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift */; };
+		CE0C9BF82ACFB0F3000022C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BF72ACFB0F3000022C4 /* Kingfisher */; };
+		CE0C9BFB2ACFB15C000022C4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFA2ACFB15C000022C4 /* SDWebImage */; };
+		CE0C9BFE2ACFB185000022C4 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFD2ACFB185000022C4 /* Nuke */; };
+		CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9C002ACFB277000022C4 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0C9BFE2ACFB185000022C4 /* Nuke in Frameworks */,
+				CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */,
+				CE0C9BFB2ACFB15C000022C4 /* SDWebImage in Frameworks */,
+				CE0C9BF82ACFB0F3000022C4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +151,12 @@
 			dependencies = (
 			);
 			name = "iOS-CacheLibrary-Analysis";
+			packageProductDependencies = (
+				CE0C9BF72ACFB0F3000022C4 /* Kingfisher */,
+				CE0C9BFA2ACFB15C000022C4 /* SDWebImage */,
+				CE0C9BFD2ACFB185000022C4 /* Nuke */,
+				CE0C9C002ACFB277000022C4 /* AlamofireImage */,
+			);
 			productName = "iOS-CacheLibrary-Analysis";
 			productReference = CE0C9BC32ACFB099000022C4 /* iOS-CacheLibrary-Analysis.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,12 @@
 				Base,
 			);
 			mainGroup = CE0C9BBA2ACFB099000022C4;
+			packageReferences = (
+				CE0C9BF62ACFB0F3000022C4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CE0C9BF92ACFB15C000022C4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				CE0C9BFC2ACFB184000022C4 /* XCRemoteSwiftPackageReference "Nuke" */,
+				CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = CE0C9BC42ACFB099000022C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +622,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE0C9BF62ACFB0F3000022C4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		CE0C9BF92ACFB15C000022C4 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CE0C9BFC2ACFB184000022C4 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE0C9BF72ACFB0F3000022C4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C9BF62ACFB0F3000022C4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		CE0C9BFA2ACFB15C000022C4 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C9BF92ACFB15C000022C4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		CE0C9BFD2ACFB185000022C4 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C9BFC2ACFB184000022C4 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		CE0C9C002ACFB277000022C4 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE0C9BBB2ACFB099000022C4 /* Project object */;
 }
