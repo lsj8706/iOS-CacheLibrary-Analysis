@@ -105,10 +105,8 @@
 		CE0C9BC52ACFB099000022C4 /* iOS-CacheLibrary-Analysis */ = {
 			isa = PBXGroup;
 			children = (
+				CEA7064D2AD5A1E900120DB9 /* Supports */,
 				CEA7064C2AD5954600120DB9 /* MainScene */,
-				CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */,
-				CE0C9BC82ACFB099000022C4 /* SceneDelegate.swift */,
-				CE0C9BCA2ACFB099000022C4 /* ViewController.swift */,
 				CE0C9BCF2ACFB09B000022C4 /* Assets.xcassets */,
 				CE0C9BD12ACFB09B000022C4 /* LaunchScreen.storyboard */,
 				CE0C9BD42ACFB09B000022C4 /* Info.plist */,
@@ -136,8 +134,18 @@
 		CEA7064C2AD5954600120DB9 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				CE0C9BCA2ACFB099000022C4 /* ViewController.swift */,
 			);
 			path = MainScene;
+			sourceTree = "<group>";
+		};
+		CEA7064D2AD5A1E900120DB9 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C9BC82ACFB099000022C4 /* SceneDelegate.swift */,
+				CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
