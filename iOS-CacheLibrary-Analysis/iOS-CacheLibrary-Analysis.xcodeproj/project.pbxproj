@@ -19,6 +19,7 @@
 		CE0C9BFB2ACFB15C000022C4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFA2ACFB15C000022C4 /* SDWebImage */; };
 		CE0C9BFE2ACFB185000022C4 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFD2ACFB185000022C4 /* Nuke */; };
 		CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9C002ACFB277000022C4 /* AlamofireImage */; };
+		CEA7064F2AD5A29B00120DB9 /* ImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CE0C9BE32ACFB09B000022C4 /* iOS-CacheLibrary-AnalysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-CacheLibrary-AnalysisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0C9BE72ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CacheLibrary_AnalysisUITests.swift; sourceTree = "<group>"; };
 		CE0C9BE92ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		CEA7064C2AD5954600120DB9 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				CEA706502AD5A86B00120DB9 /* CVC */,
 				CE0C9BCA2ACFB099000022C4 /* ViewController.swift */,
 			);
 			path = MainScene;
@@ -146,6 +149,14 @@
 				CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		CEA706502AD5A86B00120DB9 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */,
+			);
+			path = CVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA7064F2AD5A29B00120DB9 /* ImageCVC.swift in Sources */,
 				CE0C9BCB2ACFB099000022C4 /* ViewController.swift in Sources */,
 				CE0C9BC72ACFB099000022C4 /* AppDelegate.swift in Sources */,
 				CE0C9BC92ACFB099000022C4 /* SceneDelegate.swift in Sources */,
