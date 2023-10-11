@@ -23,6 +23,7 @@ final class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNavigation()
         self.setUI()
         self.setLayout()
         self.setDelegate()
@@ -33,6 +34,10 @@ final class MainVC: UIViewController {
 // MARK: - Methods
 
 extension MainVC {
+    private func setNavigation() {
+        self.title = "이미지 캐싱"
+    }
+    
     private func setUI() {
         self.view.backgroundColor = .white
     }
@@ -78,7 +83,7 @@ extension MainVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCVC.identifier, for: indexPath) as? ImageCVC
         else { return UICollectionViewCell() }
         let url = URL(string: images[indexPath.item])
-        cell.setImageView(with: url)
+//        cell.setImageView(with: url)
         return cell
     }
 }
