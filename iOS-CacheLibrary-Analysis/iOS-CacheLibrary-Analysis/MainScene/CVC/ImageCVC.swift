@@ -8,7 +8,19 @@
 import UIKit
 
 final class ImageCVC: UICollectionViewCell {
+    
+    // MARK: - Properties
+    
     static let identifier = "ImageCVC"
+    
+    // MARK: - UI Components
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+    
+    // MARK: - initialization
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -23,10 +35,17 @@ final class ImageCVC: UICollectionViewCell {
 
 extension ImageCVC {
     private func setUI() {
-        self.backgroundColor = .blue
+        self.backgroundColor = .white
     }
     
     private func setLayout() {
-        
+        self.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: self.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
 }
