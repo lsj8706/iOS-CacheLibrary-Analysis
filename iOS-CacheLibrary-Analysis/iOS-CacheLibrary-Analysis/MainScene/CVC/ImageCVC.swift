@@ -48,4 +48,9 @@ extension ImageCVC {
             imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
+    
+    func setImageView(with url: URL?) {
+        guard let url = url else { return }
+        self.imageView.setImage(with: .default, url: url)
+    }
 }

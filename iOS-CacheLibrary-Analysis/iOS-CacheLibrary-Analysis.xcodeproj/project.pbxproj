@@ -20,6 +20,9 @@
 		CE0C9BFE2ACFB185000022C4 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFD2ACFB185000022C4 /* Nuke */; };
 		CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9C002ACFB277000022C4 /* AlamofireImage */; };
 		CEA7064F2AD5A29B00120DB9 /* ImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */; };
+		CEC169892AD6DCF1007746EA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC169882AD6DCF1007746EA /* Images.swift */; };
+		CEC1698C2AD6DE00007746EA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */; };
+		CEC1698E2AD6DE80007746EA /* CachingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1698D2AD6DE80007746EA /* CachingTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		CE0C9BE72ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CacheLibrary_AnalysisUITests.swift; sourceTree = "<group>"; };
 		CE0C9BE92ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCVC.swift; sourceTree = "<group>"; };
+		CEC169882AD6DCF1007746EA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CEC1698D2AD6DE80007746EA /* CachingTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 		CE0C9BC52ACFB099000022C4 /* iOS-CacheLibrary-Analysis */ = {
 			isa = PBXGroup;
 			children = (
+				CEC1698A2AD6DDEE007746EA /* Caching */,
+				CEC169872AD6DCEA007746EA /* Model */,
 				CEA7064D2AD5A1E900120DB9 /* Supports */,
 				CEA7064C2AD5954600120DB9 /* MainScene */,
 				CE0C9BCF2ACFB09B000022C4 /* Assets.xcassets */,
@@ -157,6 +165,23 @@
 				CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */,
 			);
 			path = CVC;
+			sourceTree = "<group>";
+		};
+		CEC169872AD6DCEA007746EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC169882AD6DCF1007746EA /* Images.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEC1698A2AD6DDEE007746EA /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */,
+				CEC1698D2AD6DE80007746EA /* CachingTool.swift */,
+			);
+			path = Caching;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +328,9 @@
 			files = (
 				CEA7064F2AD5A29B00120DB9 /* ImageCVC.swift in Sources */,
 				CE0C9BCB2ACFB099000022C4 /* ViewController.swift in Sources */,
+				CEC1698E2AD6DE80007746EA /* CachingTool.swift in Sources */,
+				CEC1698C2AD6DE00007746EA /* UIImageViewExtension.swift in Sources */,
+				CEC169892AD6DCF1007746EA /* Images.swift in Sources */,
 				CE0C9BC72ACFB099000022C4 /* AppDelegate.swift in Sources */,
 				CE0C9BC92ACFB099000022C4 /* SceneDelegate.swift in Sources */,
 			);

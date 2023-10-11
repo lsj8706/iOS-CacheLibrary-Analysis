@@ -9,6 +9,8 @@ import UIKit
 
 final class MainVC: UIViewController {
     
+    private let images = Images.imageURLs
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -69,12 +71,14 @@ extension MainVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCVC.identifier, for: indexPath) as? ImageCVC
         else { return UICollectionViewCell() }
+        let url = URL(string: images[indexPath.item])
+        cell.setImageView(with: url)
         return cell
     }
 }
