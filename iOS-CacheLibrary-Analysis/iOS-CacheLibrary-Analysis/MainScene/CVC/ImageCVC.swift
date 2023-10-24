@@ -13,6 +13,8 @@ final class ImageCVC: UICollectionViewCell {
     
     static let identifier = "ImageCVC"
     
+    var index: Int?
+    
     // MARK: - UI Components
     
     private let imageView: UIImageView = {
@@ -49,7 +51,7 @@ extension ImageCVC {
         ])
     }
     
-    func setImageView(with url: URL?, tool: CachingTool) {
+    func setImageView(with url: URL?, index: Int, tool: CachingTool) {
         guard let url = url else { return }
         self.imageView.setImage(with: tool, url: url)
     }

@@ -101,7 +101,7 @@ extension MainVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCVC.identifier, for: indexPath) as? ImageCVC
         else { return UICollectionViewCell() }
         let url = URL(string: images[indexPath.item])
-        cell.setImageView(with: url, tool: .kingfisher)
+        cell.setImageView(with: url, index: indexPath.item, tool: .kingfisher)
         return cell
     }
 }
