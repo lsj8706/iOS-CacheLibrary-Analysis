@@ -73,7 +73,11 @@ extension MainVC {
     
     @objc
     private func scrollButtonDidTap(sender: UIBarItem) {
-        print("클릭")
+        let collectionViewHeight = collectionView.frame.height
+        let contentHeight = collectionView.contentSize.height
+        let diff = contentHeight - collectionViewHeight
+        let offset = CGPoint(x: 0, y: diff)
+        collectionView.setContentOffset(offset, animated: true)
     }
 }
 
@@ -97,7 +101,7 @@ extension MainVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCVC.identifier, for: indexPath) as? ImageCVC
         else { return UICollectionViewCell() }
         let url = URL(string: images[indexPath.item])
-        cell.setImageView(with: url, tool: .default)
+        cell.setImageView(with: url, tool: .kingfisher)
         return cell
     }
 }
