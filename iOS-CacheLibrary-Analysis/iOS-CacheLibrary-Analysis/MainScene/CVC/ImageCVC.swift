@@ -49,8 +49,8 @@ extension ImageCVC {
         ])
     }
     
-    func setImageView(with url: URL?) {
+    func setImageView(with url: URL?, tool: CachingTool) {
         guard let url = url else { return }
-        self.imageView.setImage(with: .nuke, url: url)
+        self.imageView.setImage(with: tool, url: url)
     }
 }
