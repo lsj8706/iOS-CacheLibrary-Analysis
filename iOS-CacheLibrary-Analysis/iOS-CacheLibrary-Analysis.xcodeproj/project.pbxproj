@@ -10,7 +10,6 @@
 		CE0C9BC72ACFB099000022C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */; };
 		CE0C9BC92ACFB099000022C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BC82ACFB099000022C4 /* SceneDelegate.swift */; };
 		CE0C9BCB2ACFB099000022C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BCA2ACFB099000022C4 /* ViewController.swift */; };
-		CE0C9BCE2ACFB099000022C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0C9BCC2ACFB099000022C4 /* Main.storyboard */; };
 		CE0C9BD02ACFB09B000022C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0C9BCF2ACFB09B000022C4 /* Assets.xcassets */; };
 		CE0C9BD32ACFB09B000022C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0C9BD12ACFB09B000022C4 /* LaunchScreen.storyboard */; };
 		CE0C9BDE2ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BDD2ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisTests.swift */; };
@@ -18,8 +17,13 @@
 		CE0C9BEA2ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C9BE92ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift */; };
 		CE0C9BF82ACFB0F3000022C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BF72ACFB0F3000022C4 /* Kingfisher */; };
 		CE0C9BFB2ACFB15C000022C4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFA2ACFB15C000022C4 /* SDWebImage */; };
-		CE0C9BFE2ACFB185000022C4 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9BFD2ACFB185000022C4 /* Nuke */; };
 		CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0C9C002ACFB277000022C4 /* AlamofireImage */; };
+		CEA7064F2AD5A29B00120DB9 /* ImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */; };
+		CEB2F86E2AE215C100E2386E /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CEB2F86D2AE215C100E2386E /* Nuke */; };
+		CEB2F8702AE215C100E2386E /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = CEB2F86F2AE215C100E2386E /* NukeExtensions */; };
+		CEC169892AD6DCF1007746EA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC169882AD6DCF1007746EA /* Images.swift */; };
+		CEC1698C2AD6DE00007746EA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */; };
+		CEC1698E2AD6DE80007746EA /* CachingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1698D2AD6DE80007746EA /* CachingTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +48,6 @@
 		CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0C9BC82ACFB099000022C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE0C9BCA2ACFB099000022C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE0C9BCD2ACFB099000022C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE0C9BCF2ACFB09B000022C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0C9BD22ACFB09B000022C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0C9BD42ACFB09B000022C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +56,10 @@
 		CE0C9BE32ACFB09B000022C4 /* iOS-CacheLibrary-AnalysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-CacheLibrary-AnalysisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0C9BE72ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CacheLibrary_AnalysisUITests.swift; sourceTree = "<group>"; };
 		CE0C9BE92ACFB09B000022C4 /* iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CacheLibrary_AnalysisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCVC.swift; sourceTree = "<group>"; };
+		CEC169882AD6DCF1007746EA /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CEC1698D2AD6DE80007746EA /* CachingTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +67,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0C9BFE2ACFB185000022C4 /* Nuke in Frameworks */,
 				CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */,
 				CE0C9BFB2ACFB15C000022C4 /* SDWebImage in Frameworks */,
 				CE0C9BF82ACFB0F3000022C4 /* Kingfisher in Frameworks */,
+				CEB2F86E2AE215C100E2386E /* Nuke in Frameworks */,
+				CEB2F8702AE215C100E2386E /* NukeExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +115,10 @@
 		CE0C9BC52ACFB099000022C4 /* iOS-CacheLibrary-Analysis */ = {
 			isa = PBXGroup;
 			children = (
-				CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */,
-				CE0C9BC82ACFB099000022C4 /* SceneDelegate.swift */,
-				CE0C9BCA2ACFB099000022C4 /* ViewController.swift */,
-				CE0C9BCC2ACFB099000022C4 /* Main.storyboard */,
+				CEC1698A2AD6DDEE007746EA /* Caching */,
+				CEC169872AD6DCEA007746EA /* Model */,
+				CEA7064D2AD5A1E900120DB9 /* Supports */,
+				CEA7064C2AD5954600120DB9 /* MainScene */,
 				CE0C9BCF2ACFB09B000022C4 /* Assets.xcassets */,
 				CE0C9BD12ACFB09B000022C4 /* LaunchScreen.storyboard */,
 				CE0C9BD42ACFB09B000022C4 /* Info.plist */,
@@ -135,6 +143,49 @@
 			path = "iOS-CacheLibrary-AnalysisUITests";
 			sourceTree = "<group>";
 		};
+		CEA7064C2AD5954600120DB9 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				CEA706502AD5A86B00120DB9 /* CVC */,
+				CE0C9BCA2ACFB099000022C4 /* ViewController.swift */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		CEA7064D2AD5A1E900120DB9 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C9BC82ACFB099000022C4 /* SceneDelegate.swift */,
+				CE0C9BC62ACFB099000022C4 /* AppDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		CEA706502AD5A86B00120DB9 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7064E2AD5A29B00120DB9 /* ImageCVC.swift */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		CEC169872AD6DCEA007746EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC169882AD6DCF1007746EA /* Images.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEC1698A2AD6DDEE007746EA /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */,
+				CEC1698D2AD6DE80007746EA /* CachingTool.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,8 +205,9 @@
 			packageProductDependencies = (
 				CE0C9BF72ACFB0F3000022C4 /* Kingfisher */,
 				CE0C9BFA2ACFB15C000022C4 /* SDWebImage */,
-				CE0C9BFD2ACFB185000022C4 /* Nuke */,
 				CE0C9C002ACFB277000022C4 /* AlamofireImage */,
+				CEB2F86D2AE215C100E2386E /* Nuke */,
+				CEB2F86F2AE215C100E2386E /* NukeExtensions */,
 			);
 			productName = "iOS-CacheLibrary-Analysis";
 			productReference = CE0C9BC32ACFB099000022C4 /* iOS-CacheLibrary-Analysis.app */;
@@ -232,8 +284,8 @@
 			packageReferences = (
 				CE0C9BF62ACFB0F3000022C4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CE0C9BF92ACFB15C000022C4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				CE0C9BFC2ACFB184000022C4 /* XCRemoteSwiftPackageReference "Nuke" */,
 				CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				CEB2F86C2AE215C100E2386E /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = CE0C9BC42ACFB099000022C4 /* Products */;
 			projectDirPath = "";
@@ -253,7 +305,6 @@
 			files = (
 				CE0C9BD32ACFB09B000022C4 /* LaunchScreen.storyboard in Resources */,
 				CE0C9BD02ACFB09B000022C4 /* Assets.xcassets in Resources */,
-				CE0C9BCE2ACFB099000022C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA7064F2AD5A29B00120DB9 /* ImageCVC.swift in Sources */,
 				CE0C9BCB2ACFB099000022C4 /* ViewController.swift in Sources */,
+				CEC1698E2AD6DE80007746EA /* CachingTool.swift in Sources */,
+				CEC1698C2AD6DE00007746EA /* UIImageViewExtension.swift in Sources */,
+				CEC169892AD6DCF1007746EA /* Images.swift in Sources */,
 				CE0C9BC72ACFB099000022C4 /* AppDelegate.swift in Sources */,
 				CE0C9BC92ACFB099000022C4 /* SceneDelegate.swift in Sources */,
 			);
@@ -317,14 +372,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE0C9BCC2ACFB099000022C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE0C9BCD2ACFB099000022C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE0C9BD12ACFB09B000022C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -462,7 +509,6 @@
 				INFOPLIST_FILE = "iOS-CacheLibrary-Analysis/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,7 +536,6 @@
 				INFOPLIST_FILE = "iOS-CacheLibrary-Analysis/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -640,20 +685,20 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		CE0C9BFC2ACFB184000022C4 /* XCRemoteSwiftPackageReference "Nuke" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.0.0;
-			};
-		};
 		CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
+			};
+		};
+		CEB2F86C2AE215C100E2386E /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -669,15 +714,20 @@
 			package = CE0C9BF92ACFB15C000022C4 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		CE0C9BFD2ACFB185000022C4 /* Nuke */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE0C9BFC2ACFB184000022C4 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
 		CE0C9C002ACFB277000022C4 /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		CEB2F86D2AE215C100E2386E /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB2F86C2AE215C100E2386E /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		CEB2F86F2AE215C100E2386E /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB2F86C2AE215C100E2386E /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
