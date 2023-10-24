@@ -9,7 +9,12 @@ import UIKit
 
 final class MainVC: UIViewController {
     
+    // MARK: - Properties
+    
     private let images = Images.imageURLs
+    private let collectionViewInset: CGFloat = 10
+    
+    // MARK: - UI Components
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -18,8 +23,11 @@ final class MainVC: UIViewController {
         cv.backgroundColor = .clear
         return cv
     }()
-    
-    private let collectionViewInset: CGFloat = 10
+        
+    lazy var scrollButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "스크롤", style: .plain, target: self, action: #selector(scrollButtonDidTap))
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +48,7 @@ extension MainVC {
     
     private func setUI() {
         self.view.backgroundColor = .white
+        self.navigationItem.rightBarButtonItem = scrollButton
     }
     
     private func setLayout() {
@@ -60,6 +69,11 @@ extension MainVC {
     
     private func setCollectionView() {
         self.collectionView.register(ImageCVC.self, forCellWithReuseIdentifier: ImageCVC.identifier)
+    }
+    
+    @objc
+    private func scrollButtonDidTap(sender: UIBarItem) {
+        print("클릭")
     }
 }
 
