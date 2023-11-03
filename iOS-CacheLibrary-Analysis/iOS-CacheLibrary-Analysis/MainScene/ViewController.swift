@@ -23,7 +23,12 @@ final class MainVC: UIViewController {
         cv.backgroundColor = .clear
         return cv
     }()
-        
+       
+    lazy var reloadButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Reload", style: .plain, target: self, action: #selector(reloadButtonDidTap))
+        return button
+    }()
+    
     lazy var scrollButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "스크롤", style: .plain, target: self, action: #selector(scrollButtonDidTap))
         return button
@@ -44,11 +49,12 @@ final class MainVC: UIViewController {
 extension MainVC {
     private func setNavigation() {
         self.title = "이미지 캐싱"
+        self.navigationItem.leftBarButtonItem = reloadButton
+        self.navigationItem.rightBarButtonItem = scrollButton
     }
     
     private func setUI() {
         self.view.backgroundColor = .white
-        self.navigationItem.rightBarButtonItem = scrollButton
     }
     
     private func setLayout() {
@@ -69,6 +75,11 @@ extension MainVC {
     
     private func setCollectionView() {
         self.collectionView.register(ImageCVC.self, forCellWithReuseIdentifier: ImageCVC.identifier)
+    }
+    
+    @objc
+    private func reloadButtonDidTap(sender: UIBarItem) {
+        collectionView.reloadData()
     }
     
     @objc
