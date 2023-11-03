@@ -12,7 +12,7 @@ final class MainVC: UIViewController {
     // MARK: - Properties
     
     private let images = Images.imageURLs
-    private let collectionViewInset: CGFloat = 10
+    private let collectionViewInset: CGFloat = 6
     
     // MARK: - UI Components
     
