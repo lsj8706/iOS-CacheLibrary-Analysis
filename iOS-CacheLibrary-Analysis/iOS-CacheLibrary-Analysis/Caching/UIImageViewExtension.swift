@@ -15,7 +15,7 @@ extension UIImageView {
     func setImage(with tool: CachingTool, url: URL, startTime: CFAbsoluteTime) {
         switch tool {
         case .`default`:
-            defaultAsyncLoad(url: url)
+            defaultAsyncLoad(url: url, startTime: startTime)
         case .kingfisher:
             loadUsingKingfisher(url: url, startTime: startTime)
         case .sdWebImage:
@@ -27,12 +27,13 @@ extension UIImageView {
         }
     }
     
-    func defaultAsyncLoad(url: URL) {
+    func defaultAsyncLoad(url: URL, startTime: CFAbsoluteTime) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self?.image = image
+                        self?.printProgressTime(startTime: startTime)
                     }
                 }
             }
@@ -74,6 +75,12 @@ extension UIImageView {
         // Fetch
         let cachedImage = imageCache.image(for: urlRequest, withIdentifier: url.absoluteString)
         self.image = cachedImage
+    }
+    
+    func printProgressTime(startTime: CFAbsoluteTime) {
+        let endTime = CFAbsoluteTimeGetCurrent()
+        let diff = endTime - startTime
+        print(diff)
     }
 }
 
