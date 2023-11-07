@@ -12,12 +12,12 @@ import Nuke
 import AlamofireImage
 
 extension UIImageView {
-    func setImage(with tool: CachingTool, url: URL) {
+    func setImage(with tool: CachingTool, url: URL, startTime: CFAbsoluteTime) {
         switch tool {
         case .`default`:
             defaultAsyncLoad(url: url)
         case .kingfisher:
-            loadUsingKingfisher(url: url)
+            loadUsingKingfisher(url: url, startTime: startTime)
         case .sdWebImage:
             loadUsingSdWebImage(url: url)
         case .nuke:
@@ -39,8 +39,12 @@ extension UIImageView {
         }
     }
     
-    func loadUsingKingfisher(url: URL) {
-        self.kf.setImage(with: url)
+    func loadUsingKingfisher(url: URL, startTime: CFAbsoluteTime) {
+        self.kf.setImage(with: url) { result in
+            let endTime = CFAbsoluteTimeGetCurrent()
+            let diff = endTime - startTime
+            print(diff)
+        }
     }
     
     func loadUsingSdWebImage(url: URL) {

@@ -13,6 +13,7 @@ final class MainVC: UIViewController {
     
     private let images = Images.imageURLs
     private let collectionViewInset: CGFloat = 6
+    private var startTime: CFAbsoluteTime = CFAbsoluteTimeGetCurrent()
     
     // MARK: - UI Components
     
@@ -84,6 +85,10 @@ extension MainVC {
     
     @objc
     private func scrollButtonDidTap(sender: UIBarItem) {
+        self.scroll()
+    }
+    
+    private func scroll() {
         let collectionViewHeight = collectionView.frame.height
         let contentHeight = collectionView.contentSize.height
         let diff = contentHeight - collectionViewHeight
@@ -111,8 +116,13 @@ extension MainVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCVC.identifier, for: indexPath) as? ImageCVC
         else { return UICollectionViewCell() }
+        
+        if indexPath.item == 0 {
+            self.startTime = CFAbsoluteTimeGetCurrent()
+        }
+        
         let url = URL(string: images[indexPath.item])
-        cell.setImageView(with: url, index: indexPath.item, tool: .kingfisher)
+        cell.setImageView(with: url, index: indexPath.item, tool: .kingfisher, startTime: self.startTime)
         return cell
     }
 }
@@ -121,7 +131,7 @@ extension MainVC: UICollectionViewDataSource {
 
 extension MainVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (self.view.frame.width - 2*collectionViewInset) / 3
+        let width = (self.view.frame.width) / 6
         let height = width
         return CGSize(width: width, height: height)
     }

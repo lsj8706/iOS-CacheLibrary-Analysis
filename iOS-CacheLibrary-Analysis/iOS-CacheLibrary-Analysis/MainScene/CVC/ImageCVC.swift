@@ -51,8 +51,8 @@ extension ImageCVC {
         ])
     }
     
-    func setImageView(with url: URL?, index: Int, tool: CachingTool) {
+    func setImageView(with url: URL?, index: Int, tool: CachingTool, startTime: CFAbsoluteTime) {
         guard let url = url else { return }
-        self.imageView.setImage(with: tool, url: url)
+        self.imageView.setImage(with: tool, url: url, startTime: startTime)
     }
 }
