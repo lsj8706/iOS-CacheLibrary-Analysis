@@ -41,10 +41,8 @@ extension UIImageView {
     }
     
     func loadUsingKingfisher(url: URL, startTime: CFAbsoluteTime) {
-        self.kf.setImage(with: url) { result in
-            let endTime = CFAbsoluteTimeGetCurrent()
-            let diff = endTime - startTime
-            print(diff)
+        self.kf.setImage(with: url) { [weak self] result in
+            self?.printProgressTime(startTime: startTime)
         }
     }
     
@@ -53,10 +51,10 @@ extension UIImageView {
     }
     
     func loadUsingNuke(url: URL) {
-        ImagePipeline.shared.loadImage(with: url) { result in
+        ImagePipeline.shared.loadImage(with: url) { [weak self] result in
             switch result {
             case .success(let imageResonse):
-                self.image = imageResonse.image
+                self?.image = imageResonse.image
             case .failure(let error):
                 print(error)
             }

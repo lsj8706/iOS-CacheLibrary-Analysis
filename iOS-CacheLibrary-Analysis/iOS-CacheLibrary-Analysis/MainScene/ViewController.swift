@@ -122,7 +122,7 @@ extension MainVC: UICollectionViewDataSource {
         }
         
         let url = URL(string: images[indexPath.item])
-        cell.setImageView(with: url, index: indexPath.item, tool: .sdWebImage, startTime: self.startTime)
+        cell.setImageView(with: url, index: indexPath.item, tool: .kingfisher, startTime: self.startTime)
         return cell
     }
 }
