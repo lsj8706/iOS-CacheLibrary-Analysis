@@ -95,6 +95,15 @@ extension MainVC {
         let offset = CGPoint(x: 0, y: diff)
         collectionView.setContentOffset(offset, animated: true)
     }
+    
+    private func changeRootVC() {
+        let vc = UIViewController()
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+        guard let delegate = sceneDelegate else {
+            return
+        }
+        delegate.window?.rootViewController = vc
+    }
 }
 
 // MARK: - UICollectionViewDelegate
