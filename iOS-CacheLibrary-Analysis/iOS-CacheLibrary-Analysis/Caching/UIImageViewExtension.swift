@@ -19,7 +19,7 @@ extension UIImageView {
         case .kingfisher:
             loadUsingKingfisher(url: url, startTime: startTime)
         case .sdWebImage:
-            loadUsingSdWebImage(url: url)
+            loadUsingSdWebImage(url: url, startTime: startTime)
         case .nuke:
             loadUsingNuke(url: url)
         case .alamofire:
@@ -46,8 +46,10 @@ extension UIImageView {
         }
     }
     
-    func loadUsingSdWebImage(url: URL) {
-        self.sd_setImage(with: url)
+    func loadUsingSdWebImage(url: URL, startTime: CFAbsoluteTime) {
+        self.sd_setImage(with: url) { [weak self] _, _, _, _ in
+            self?.printProgressTime(startTime: startTime)
+        }
     }
     
     func loadUsingNuke(url: URL) {
