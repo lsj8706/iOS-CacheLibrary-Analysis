@@ -12,6 +12,16 @@ import Nuke
 import AlamofireImage
 
 extension UIImageView {
+
+    var pixelSize: CGFloat {
+      return 65.0 * UIScreen.main.scale
+    }
+
+    var resizedImageProcessors: [ImageProcessing] {
+      let imageSize = CGSize(width: pixelSize, height: pixelSize)
+      return [ImageProcessors.Resize(size: imageSize, contentMode: .aspectFill)]
+    }
+    
     func setImage(with tool: CachingTool, url: URL, startTime: CFAbsoluteTime) {
         switch tool {
         case .`default`:
@@ -21,7 +31,7 @@ extension UIImageView {
         case .sdWebImage:
             loadUsingSdWebImage(url: url, startTime: startTime)
         case .nuke:
-            loadUsingNuke(url: url)
+            loadUsingNuke(url: url, startTime: startTime)
         case .alamofire:
             loadUsingAlamofireImage(url: url)
         }
@@ -52,15 +62,31 @@ extension UIImageView {
         }
     }
     
-    func loadUsingNuke(url: URL) {
-        ImagePipeline.shared.loadImage(with: url) { [weak self] result in
+    func loadUsingNuke(url: URL, startTime: CFAbsoluteTime) {
+        let request = ImageRequest(url: url, processors: resizedImageProcessors)
+        
+        ImagePipeline.shared.loadImage(with: request) { response, completed, total in
+            print(response, completed, total)
+        } completion: { [weak self] result in
             switch result {
             case .success(let imageResonse):
+                self?.printProgressTime(startTime: startTime)
                 self?.image = imageResonse.image
             case .failure(let error):
                 print(error)
             }
         }
+
+        
+//        ImagePipeline.shared.loadImage(with: url) { [weak self] result in
+//            switch result {
+//            case .success(let imageResonse):
+//                self?.printProgressTime(startTime: startTime)
+//                self?.image = imageResonse.image
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     func loadUsingAlamofireImage(url: URL) {
