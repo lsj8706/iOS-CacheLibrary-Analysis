@@ -89,7 +89,12 @@ extension UIImageView {
     }
     
     func loadUsingAlamofireImage(url: URL, startTime: CFAbsoluteTime) {
-        self.af.setImage(withURL: url, completion:  { [weak self] _ in
+        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+            size: CGSize(width: pixelSize, height: pixelSize),
+            radius: 5.0
+        )
+        
+        self.af.setImage(withURL: url, filter: filter, completion:  { [weak self] _ in
             self?.printProgressTime(startTime: startTime)
         })
     }
