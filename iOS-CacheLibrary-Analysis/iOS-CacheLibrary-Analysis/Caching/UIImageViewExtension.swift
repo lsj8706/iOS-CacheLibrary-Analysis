@@ -33,7 +33,7 @@ extension UIImageView {
         case .nuke:
             loadUsingNuke(url: url, startTime: startTime)
         case .alamofire:
-            loadUsingAlamofireImage(url: url)
+            loadUsingAlamofireImage(url: url, startTime: startTime)
         }
     }
     
@@ -65,8 +65,7 @@ extension UIImageView {
     func loadUsingNuke(url: URL, startTime: CFAbsoluteTime) {
         let request = ImageRequest(url: url, processors: resizedImageProcessors)
         
-        ImagePipeline.shared.loadImage(with: request) { response, completed, total in
-            print(response, completed, total)
+        ImagePipeline.shared.loadImage(with: request) { _, _, _ in
         } completion: { [weak self] result in
             switch result {
             case .success(let imageResonse):
@@ -89,18 +88,10 @@ extension UIImageView {
 //        }
     }
     
-    func loadUsingAlamofireImage(url: URL) {
-        let imageCache = AutoPurgingImageCache()
-
-        let urlRequest = URLRequest(url: url)
-        let avatarImage = UIImage(named: url.absoluteString)!.af.imageRoundedIntoCircle()
-
-        // Add
-        imageCache.add(avatarImage, for: urlRequest, withIdentifier: url.absoluteString)
-
-        // Fetch
-        let cachedImage = imageCache.image(for: urlRequest, withIdentifier: url.absoluteString)
-        self.image = cachedImage
+    func loadUsingAlamofireImage(url: URL, startTime: CFAbsoluteTime) {
+        self.af.setImage(withURL: url, completion:  { [weak self] _ in
+            self?.printProgressTime(startTime: startTime)
+        })
     }
     
     func printProgressTime(startTime: CFAbsoluteTime) {

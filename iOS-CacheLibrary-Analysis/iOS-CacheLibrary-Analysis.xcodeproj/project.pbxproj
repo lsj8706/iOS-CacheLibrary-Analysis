@@ -24,6 +24,7 @@
 		CEC169892AD6DCF1007746EA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC169882AD6DCF1007746EA /* Images.swift */; };
 		CEC1698C2AD6DE00007746EA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1698B2AD6DE00007746EA /* UIImageViewExtension.swift */; };
 		CEC1698E2AD6DE80007746EA /* CachingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1698D2AD6DE80007746EA /* CachingTool.swift */; };
+		CEFE15432B186F9C0087187A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEFE15422B186F9C0087187A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 				CE0C9C012ACFB277000022C4 /* AlamofireImage in Frameworks */,
 				CE0C9BFB2ACFB15C000022C4 /* SDWebImage in Frameworks */,
 				CE0C9BF82ACFB0F3000022C4 /* Kingfisher in Frameworks */,
+				CEFE15432B186F9C0087187A /* Alamofire in Frameworks */,
 				CEB2F86E2AE215C100E2386E /* Nuke in Frameworks */,
 				CEB2F8702AE215C100E2386E /* NukeExtensions in Frameworks */,
 			);
@@ -208,6 +210,7 @@
 				CE0C9C002ACFB277000022C4 /* AlamofireImage */,
 				CEB2F86D2AE215C100E2386E /* Nuke */,
 				CEB2F86F2AE215C100E2386E /* NukeExtensions */,
+				CEFE15422B186F9C0087187A /* Alamofire */,
 			);
 			productName = "iOS-CacheLibrary-Analysis";
 			productReference = CE0C9BC32ACFB099000022C4 /* iOS-CacheLibrary-Analysis.app */;
@@ -286,6 +289,7 @@
 				CE0C9BF92ACFB15C000022C4 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				CE0C9BFF2ACFB277000022C4 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				CEB2F86C2AE215C100E2386E /* XCRemoteSwiftPackageReference "Nuke" */,
+				CEFE15412B186F9C0087187A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = CE0C9BC42ACFB099000022C4 /* Products */;
 			projectDirPath = "";
@@ -701,6 +705,14 @@
 				minimumVersion = 12.0.0;
 			};
 		};
+		CEFE15412B186F9C0087187A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -728,6 +740,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEB2F86C2AE215C100E2386E /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeExtensions;
+		};
+		CEFE15422B186F9C0087187A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEFE15412B186F9C0087187A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -131,7 +131,7 @@ extension MainVC: UICollectionViewDataSource {
         }
         
         let url = URL(string: images[indexPath.item])
-        cell.setImageView(with: url, index: indexPath.item, tool: .nuke, startTime: self.startTime)
+        cell.setImageView(with: url, index: indexPath.item, tool: .alamofire, startTime: self.startTime)
         return cell
     }
 }
